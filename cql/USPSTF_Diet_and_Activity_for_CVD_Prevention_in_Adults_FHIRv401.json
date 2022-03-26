@@ -611,26 +611,30 @@
             "expression" : {
                "type" : "If",
                "condition" : {
-                  "type" : "Equivalent",
-                  "operand" : [ {
-                     "name" : "ToConcept",
-                     "libraryName" : "FHIRHelpers",
-                     "type" : "FunctionRef",
+                  "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "As",
+                  "operand" : {
+                     "type" : "Equivalent",
                      "operand" : [ {
-                        "path" : "code",
-                        "type" : "Property",
-                        "source" : {
-                           "name" : "MostRecentSystolicBloodPressureReading",
-                           "type" : "ExpressionRef"
+                        "name" : "ToConcept",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "operand" : [ {
+                           "path" : "code",
+                           "type" : "Property",
+                           "source" : {
+                              "name" : "MostRecentSystolicBloodPressureReading",
+                              "type" : "ExpressionRef"
+                           }
+                        } ]
+                     }, {
+                        "type" : "ToConcept",
+                        "operand" : {
+                           "name" : "Blood pressure panel",
+                           "type" : "CodeRef"
                         }
                      } ]
-                  }, {
-                     "type" : "ToConcept",
-                     "operand" : {
-                        "name" : "Blood pressure panel",
-                        "type" : "CodeRef"
-                     }
-                  } ]
+                  }
                },
                "then" : {
                   "type" : "SingletonFrom",
@@ -766,26 +770,30 @@
             "expression" : {
                "type" : "If",
                "condition" : {
-                  "type" : "Equivalent",
-                  "operand" : [ {
-                     "name" : "ToConcept",
-                     "libraryName" : "FHIRHelpers",
-                     "type" : "FunctionRef",
+                  "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "As",
+                  "operand" : {
+                     "type" : "Equivalent",
                      "operand" : [ {
-                        "path" : "code",
-                        "type" : "Property",
-                        "source" : {
-                           "name" : "MostRecentDiastolicBloodPressureReading",
-                           "type" : "ExpressionRef"
+                        "name" : "ToConcept",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "operand" : [ {
+                           "path" : "code",
+                           "type" : "Property",
+                           "source" : {
+                              "name" : "MostRecentDiastolicBloodPressureReading",
+                              "type" : "ExpressionRef"
+                           }
+                        } ]
+                     }, {
+                        "type" : "ToConcept",
+                        "operand" : {
+                           "name" : "Blood pressure panel",
+                           "type" : "CodeRef"
                         }
                      } ]
-                  }, {
-                     "type" : "ToConcept",
-                     "operand" : {
-                        "name" : "Blood pressure panel",
-                        "type" : "CodeRef"
-                     }
-                  } ]
+                  }
                },
                "then" : {
                   "type" : "SingletonFrom",
@@ -2307,8 +2315,12 @@
             "expression" : {
                "type" : "If",
                "condition" : {
-                  "name" : "InPopulation",
-                  "type" : "ExpressionRef"
+                  "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "As",
+                  "operand" : {
+                     "name" : "InPopulation",
+                     "type" : "ExpressionRef"
+                  }
                },
                "then" : {
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
@@ -2330,8 +2342,12 @@
             "expression" : {
                "type" : "If",
                "condition" : {
-                  "name" : "InPopulation",
-                  "type" : "ExpressionRef"
+                  "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "As",
+                  "operand" : {
+                     "name" : "InPopulation",
+                     "type" : "ExpressionRef"
+                  }
                },
                "then" : {
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
@@ -2359,10 +2375,14 @@
                      "element" : [ {
                         "type" : "If",
                         "condition" : {
-                           "type" : "IsNull",
+                           "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "As",
                            "operand" : {
-                              "name" : "MostRecentHDLcTest",
-                              "type" : "ExpressionRef"
+                              "type" : "IsNull",
+                              "operand" : {
+                                 "name" : "MostRecentHDLcTest",
+                                 "type" : "ExpressionRef"
+                              }
                            }
                         },
                         "then" : {
@@ -2380,10 +2400,14 @@
                      }, {
                         "type" : "If",
                         "condition" : {
-                           "type" : "IsNull",
+                           "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "As",
                            "operand" : {
-                              "name" : "MostRecentWaistCircumferenceMeasurement",
-                              "type" : "ExpressionRef"
+                              "type" : "IsNull",
+                              "operand" : {
+                                 "name" : "MostRecentWaistCircumferenceMeasurement",
+                                 "type" : "ExpressionRef"
+                              }
                            }
                         },
                         "then" : {
@@ -2401,10 +2425,14 @@
                      }, {
                         "type" : "If",
                         "condition" : {
-                           "type" : "IsNull",
+                           "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "As",
                            "operand" : {
-                              "name" : "MostRecentLDLcTest",
-                              "type" : "ExpressionRef"
+                              "type" : "IsNull",
+                              "operand" : {
+                                 "name" : "MostRecentLDLcTest",
+                                 "type" : "ExpressionRef"
+                              }
                            }
                         },
                         "then" : {
@@ -2422,10 +2450,14 @@
                      }, {
                         "type" : "If",
                         "condition" : {
-                           "type" : "IsNull",
+                           "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "As",
                            "operand" : {
-                              "name" : "MostRecentDiastolicBloodPressureReading",
-                              "type" : "ExpressionRef"
+                              "type" : "IsNull",
+                              "operand" : {
+                                 "name" : "MostRecentDiastolicBloodPressureReading",
+                                 "type" : "ExpressionRef"
+                              }
                            }
                         },
                         "then" : {
@@ -2443,10 +2475,14 @@
                      }, {
                         "type" : "If",
                         "condition" : {
-                           "type" : "IsNull",
+                           "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "As",
                            "operand" : {
-                              "name" : "MostRecentSystolicBloodPressureReading",
-                              "type" : "ExpressionRef"
+                              "type" : "IsNull",
+                              "operand" : {
+                                 "name" : "MostRecentSystolicBloodPressureReading",
+                                 "type" : "ExpressionRef"
+                              }
                            }
                         },
                         "then" : {
@@ -2464,10 +2500,14 @@
                      }, {
                         "type" : "If",
                         "condition" : {
-                           "type" : "IsNull",
+                           "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "As",
                            "operand" : {
-                              "name" : "MostRecentFastingPlasmaGlucoseTest",
-                              "type" : "ExpressionRef"
+                              "type" : "IsNull",
+                              "operand" : {
+                                 "name" : "MostRecentFastingPlasmaGlucoseTest",
+                                 "type" : "ExpressionRef"
+                              }
                            }
                         },
                         "then" : {
@@ -2485,10 +2525,14 @@
                      }, {
                         "type" : "If",
                         "condition" : {
-                           "type" : "IsNull",
+                           "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "As",
                            "operand" : {
-                              "name" : "MostRecentTriglycerideLab",
-                              "type" : "ExpressionRef"
+                              "type" : "IsNull",
+                              "operand" : {
+                                 "name" : "MostRecentTriglycerideLab",
+                                 "type" : "ExpressionRef"
+                              }
                            }
                         },
                         "then" : {
@@ -2506,10 +2550,14 @@
                      }, {
                         "type" : "If",
                         "condition" : {
-                           "type" : "IsNull",
+                           "asType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "As",
                            "operand" : {
-                              "name" : "MostRecentCVDRiskScore",
-                              "type" : "ExpressionRef"
+                              "type" : "IsNull",
+                              "operand" : {
+                                 "name" : "MostRecentCVDRiskScore",
+                                 "type" : "ExpressionRef"
+                              }
                            }
                         },
                         "then" : {
