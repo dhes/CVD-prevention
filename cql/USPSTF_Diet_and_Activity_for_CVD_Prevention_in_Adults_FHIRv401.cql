@@ -358,27 +358,27 @@ Here are some links to resources to help you get started:
 define Information:
   Combine(List{
     if (MostRecentHDLcTest is null) then
-      '- No recent HDLc lab test available.'
+      '- Recent HDLc lab test.'
     else null,
     if (MostRecentWaistCircumferenceMeasurement is null) then
-      '- No recent waist circumference measurement available.'
+      '- Recent waist circumference measurement.'
     else null,
     if (MostRecentLDLcTest is null) then
-      '- No recent LDLc lab test available.'
+      '- Recent LDLc lab test.'
     else null,
     if (MostRecentDiastolicBloodPressureReading is null) then
-      '- No recent diastolic blood pressure reading available.'
+      '- Recent diastolic blood pressure reading.'
     else null,
     if (MostRecentSystolicBloodPressureReading is null) then
-      '- No recent systolic blood pressure reading available.'
+      '- Recent systolic blood pressure reading.'
     else null,
     if (MostRecentFastingPlasmaGlucoseTest is null) then
-      '- No recent fasting plasma glucose lab test available.'
+      '- Recent fasting plasma glucose lab test.'
     else null,
     if (MostRecentTriglycerideLab is null) then
-      '- No recent triglyceride lab test available.'
+      '- Recent triglyceride lab test.'
     else null,
     if (MostRecentCVDRiskScore is null) then
-      '- No recent CVD risk score available.'
+      '- Recent CVD risk score.'
     else null
   },'\n')
