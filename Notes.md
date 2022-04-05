@@ -4,4 +4,7 @@ Which data elements are required? The guideline uses the phrase 'known' cardiova
 |--- | :---: | ---|
 |hypertension|18|Hypertension in Adults|
 |obesity|18|Weight Loss to Prevent Obesity-Related Morbidity and Mortality in Adults|
+||||
 
+
+You could call these _proactive_ or _lazy_ (_laissez-faire_) data points. _Proactive_ must be measured before a recommencation can be made; more information should be requested. In the case of _lazy_ the recommendation to be made whether the _lazy_ data is recorded or not. 
